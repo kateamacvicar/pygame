@@ -1,6 +1,6 @@
 import pygame
-import spritesheet
 from player import Player
+from animated_text import Text
 
 pygame.init()
 

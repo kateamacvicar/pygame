@@ -37,6 +37,8 @@ def draw_bg():
 #the 'player' bit is good for if you have multiple different sprites. But I only have the one. Right now that doesnt really do anything
 player = Player('player', 200, 650, 1, 0.4)
 
+#intro text
+intro_text = Text("It's awfully cold and quiet out here...")
 #set up pygame window
 # sprite_sheet_image = pygame.image.load('assets/idle_spritesheet.png').convert_alpha()
 # #extract our image from the spritesheet
@@ -71,6 +73,10 @@ while run:
 
     #update animation
     player.update_animation()
+
+    #start text animation
+    snip = intro_text.animate()
+    screen.blit(snip, (300, 100))
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
